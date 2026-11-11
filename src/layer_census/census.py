@@ -27,7 +27,7 @@ def layer_stats(weight, name=None):
     if w.ndim != 2:
         raise ValueError("weight must be a 2-D matrix")
     s = np.linalg.svd(w, compute_uv=False)
-    lam = np.clip(s, 1e-12, None) ** 2
+    lam = s ** 2
     total = float(np.sum(lam))
     top1 = float(lam[0]) / total if total > 0 else 0.0
     k = min(10, len(lam))
