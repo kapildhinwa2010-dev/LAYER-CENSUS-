@@ -8,7 +8,7 @@ def test_identity_layer():
     e = layer_stats(np.eye(8))
     assert e["shape"] == [8, 8]
     assert e["params"] == 64
-    assert e["frobenius_norm"] == pytest.approx(8.0)
+    assert e["frobenius_norm"] == pytest.approx(float(np.sqrt(8.0)))
     assert e["effective_rank"] == pytest.approx(8.0)
     assert e["top1_variance_share"] == pytest.approx(1.0 / 8.0)
     assert e["top10_variance_share"] == pytest.approx(1.0)
