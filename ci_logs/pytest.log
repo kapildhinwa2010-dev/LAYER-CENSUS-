@@ -1,0 +1,33 @@
+F.F...                                                                   [100%]
+=================================== FAILURES ===================================
+_____________________________ test_identity_layer ______________________________
+
+    def test_identity_layer():
+        e = layer_stats(np.eye(8))
+        assert e["shape"] == [8, 8]
+        assert e["params"] == 64
+>       assert e["frobenius_norm"] == pytest.approx(8.0)
+E       assert 2.8284271247461903 == 8.0 ± 8.0e-06
+E         
+E         comparison failed
+E         Obtained: 2.8284271247461903
+E         Expected: 8.0 ± 8.0e-06
+
+tests/test_census.py:11: AssertionError
+_______________________________ test_zero_matrix _______________________________
+
+    def test_zero_matrix():
+        assert effective_rank(np.zeros((4, 6))) == 0.0
+        e = layer_stats(np.zeros((4, 6)))
+>       assert e["top1_variance_share"] == 0.0
+E       assert 0.25 == 0.0
+
+tests/test_census.py:29: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_census.py::test_identity_layer - assert 2.8284271247461903 == 8.0 ± 8.0e-06
+  
+  comparison failed
+  Obtained: 2.8284271247461903
+  Expected: 8.0 ± 8.0e-06
+FAILED tests/test_census.py::test_zero_matrix - assert 0.25 == 0.0
+2 failed, 4 passed in 0.30s
