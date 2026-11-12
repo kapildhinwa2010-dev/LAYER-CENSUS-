@@ -1,5 +1,7 @@
 # LAYER-CENSUS
 
+[![Stars](https://img.shields.io/github/stars/kapildhinwa2010-dev/LAYER-CENSUS-?style=flat-square)](https://github.com/kapildhinwa2010-dev/LAYER-CENSUS-/stargazers) [![Forks](https://img.shields.io/github/forks/kapildhinwa2010-dev/LAYER-CENSUS-?style=flat-square)](https://github.com/kapildhinwa2010-dev/LAYER-CENSUS-/network/members) [![Issues](https://img.shields.io/github/issues/kapildhinwa2010-dev/LAYER-CENSUS-?style=flat-square)](https://github.com/kapildhinwa2010-dev/LAYER-CENSUS-/issues) [![Top language](https://img.shields.io/github/languages/top/kapildhinwa2010-dev/LAYER-CENSUS-?style=flat-square)](https://github.com/kapildhinwa2010-dev/LAYER-CENSUS-)
+
 Point it at any list of weight matrices and get a full internal atlas of the model.
 
 LAYER-CENSUS produces one atlas entry per layer: shape, parameter count, Frobenius norm, effective rank, and spectrum decay measured as top-1 and top-10 variance shares. The full census adds totals, the layer with the lowest rank, and the largest layer.
